@@ -120,4 +120,27 @@ for ($i = $numero; $i > 1; $i--) {
 echo "O fatorial de $numero é $fatorial.";
 ?>
 
+<?php
+$numero5 = 12; // Defina o valor aqui para testar
+$nPrimo = true;
+
+// O laço vai apenas até MENOR que o número
+for ($i = 2; $i < $numero5; $i++) {
+    if ($numero5 % $i == 0) {
+        $nPrimo = false; 
+        break; // Encontrou divisor, para o laço na hora
+    } 
+}
+
+// A verificação fica FORA do laço
+if ($nPrimo && $numero5 > 1) {
+    echo "$numero5 é primo";
+} else {
+    echo "$numero5 não é primo";
+}
+
+
+
+
+
 ?>
