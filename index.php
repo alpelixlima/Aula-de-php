@@ -1,0 +1,245 @@
+<?php
+
+#questao [1]
+
+$numero = 1;
+
+while ($numero <= 50) {
+    echo $numero . "\n";
+    $numero++;
+} 
+    echo " fim da contagem.";
+
+
+?> 
+
+
+
+<?php
+#questao [2]
+
+for ($i = 0; $i <= 30; $i++) {
+    if($i % 2 == 0) {
+        echo "$i - par\n";
+    }else {
+        echo "$i - impa\n";
+    }
+
+}
+?> 
+
+<?php
+#questao [3]
+
+$numero1 = 5;
+
+for ($g = 1; $g <= 10 ; $g++) {
+   $soma = $g * $numero1;
+
+    Echo "5 x $soma \n";
+}
+
+?>
+
+
+
+<?php
+#questão [4]
+
+$valor = 0;
+$numero2 = 1; 
+
+while ($numero2 <= 100) {
+    $valor += $numero2;
+    $numero2 += 1;
+
+    echo "soma total $valor \n";
+}
+
+?>
+
+
+<?php
+#questão [5]
+$numero3 = 15;
+
+if ($numero3 % 3 == 0 && $numero3 % 5 == 0) {
+    echo "\n numero e multiplo de 3 e 5";
+}
+
+elseif ($numero3 % 3 == 0) {
+    echo "\n numero e multiplo de 3";
+}
+elseif ($numero3 % 5 == 0) {
+    echo "\n numero e multiplo de 5";
+} else {
+    echo "\n o numero não e multiplo ";
+}
+
+?>
+
+
+<?php
+#questão [6]
+
+$a = 15;
+$b = 32;
+$c = 21;
+
+if ($a >= $b && $b >= $c) {
+    echo "o maior numero é: " . $a;
+}
+elseif ($b >= $a && $b >= $c) {
+    echo "o maior numero é:" . $b;
+}else {
+    echo "o maior numero é:" . $c;
+}
+?>
+
+
+<?php
+#questao [7]
+$r = 20;
+
+for ($r - 1; $r = 0 ; $r--) {
+    echo "contagem encerrada!";
+}
+
+
+?>
+
+<?php
+#questao [8]
+$numero = 5; 
+$fatorial = 1;
+
+for ($i = $numero; $i > 1; $i--) {
+    $fatorial *= $i;
+}
+
+echo "O fatorial de $numero é $fatorial.";
+?>
+
+<?php
+#questao [9]
+$numero5 = 12; 
+$nPrimo = true;
+
+
+for ($i = 2; $i < $numero5; $i++) {
+    if ($numero5 % $i == 0) {
+        $nPrimo = false; 
+        break; 
+    } 
+}
+
+if ($nPrimo && $numero5 > 1) {
+    echo "$numero5 é primo";
+} else {
+    echo "$numero5 não é primo";
+}
+?>
+
+<?php
+#questão [10]
+
+$a = 1;
+$b = 1;
+$n = 0;
+
+for ($i = 1; $i <= 15; $i++) {
+
+    $n = $a + $b;
+    $b = $a;
+    $a = $n;
+
+    echo "$n\n";
+}   
+?>
+
+
+<?php
+#questao [11]
+
+$numero = [45, 12, 89, 3, 67, 21, 100, 8, 55];
+
+$maior = $numero [0];
+$menor = $numero [0];
+$posicaoMaior = 0;
+$posicaoMenor = 0;
+
+foreach ($numero as $posicao => $numero) {
+
+    if ($numero > $maior) {
+        $maior = $numero;
+        $posicaoMaior = $posicao;
+    }
+
+    
+}
+
+    if ($numero < $menor) {
+        $menor = $numero;
+        $posicaoMenor = $posicao;
+    }
+
+
+echo "Maior número: " . $maior . " (Posição: " . $posicaoMaior . ")\n";
+echo "Menor número: " . $menor . " (Posição: " . $posicaoMenor . ")\n";
+?>
+
+<?php
+#questao [12];
+
+$notas = [7.5, 4.0, 8.5, 6.0, 9.0, 3.5, 10.0, 5.5];
+
+
+$soma = 0;
+$maioresOuIguaisA6 = 0;
+$menoresQue6 = 0;
+
+
+$maiorNota = $notas[0];
+$menorNota = $notas[0];
+
+
+foreach ($notas as $nota) {
+    
+    $soma += $nota;
+
+    if ($nota >= 6.0) {
+        $maioresOuIguaisA6++;
+    } else {
+        $menoresQue6++;
+    }
+
+    
+    if ($nota > $maiorNota) {
+        $maiorNota = $nota;
+    }
+
+    
+    if ($nota < $menorNota) {
+        $menorNota = $nota;
+    }
+}
+
+$totalAlunos = count($notas);
+$media = $soma / $totalAlunos;
+
+echo "Média da turma: " . number_format($media, 2) . "\n";
+echo "Alunos com nota >= 6: " . $maioresOuIguaisA6 . "\n";
+echo "Alunos com nota < 6: " . $menoresQue6 . "\n";
+echo "Maior nota: " . $maiorNota . "\n";
+echo "Menor nota: " . $menorNota . "\n";
+?>
+
+
+<?php
+
+
+
+
+
+
+?>
